@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+
+* {
+	font-family: "Righteous", cursive;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: #fff9ed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 100vw;
+	flex-wrap: wrap;
+	padding: 40px 0;
+
+	.card {
+		position: relative;
+		width: 320px;
+		height: 440px;
+		box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.05),
+			inset -5px -5px 5px rgba(255, 255, 255, 0.5), 5px 5px 5px rgba(0, 0, 0, 0.05),
+			-5px -5px 5px rgba(255, 255, 255, 0.5);
+		border-radius: 15px;
+		margin: 30px;
+
+		.box {
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			bottom: 20px;
+			left: 20px;
+			background: #fff9ed;
+			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+			border-radius: 15px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			transition: 0.5s;
+
+			.content {
+				padding: 20px;
+				text-align: center;
+
+				.fab {
+					position: absolute;
+					top: 20px;
+					right: 20px;
+					font-size: clamp(55px, 10vw, 65px);
+					pointer-events: none;
+				}
+
+				.fa-python {
+					background: rgb(0, 115, 163);
+					background: linear-gradient(
+						90deg,
+						rgba(0, 115, 163, 1) 0%,
+						rgba(255, 210, 41, 1) 100%
+					);
+					-webkit-background-clip: text;
+					background-clip: text;
+					-webkit-text-fill-color: transparent;
+					text-fill-color: transparent;
+				}
+
+				.fa-java {
+					background: rgb(255, 0, 0);
+					background: linear-gradient(
+						90deg,
+						rgba(255, 0, 0, 1) 0%,
+						rgba(125, 108, 130, 1) 70%,
+						rgba(0, 212, 255, 1) 100%
+					);
+					-webkit-background-clip: text;
+					background-clip: text;
+					-webkit-text-fill-color: transparent;
+					text-fill-color: transparent;
+				}
+
+				.fa-js-square {
+					background-color: #fbda61;
+					background-image: linear-gradient(45deg, #fbda61 0%, #ff5acd 100%);
+					-webkit-background-clip: text;
+					background-clip: text;
+					-webkit-text-fill-color: transparent;
+					text-fill-color: transparent;
+				}
+
+				h3 {
+					font-size: 1.8em;
+					color: #777;
+					z-index: 1;
+					transition: 0.5s;
+				}
+
+				p {
+					font-size: 1em;
+					color: #777;
+					z-index: 1;
+					transition: 0.5s;
+				}
+
+				a {
+					position: relative;
+					display: inline-block;
+					padding: 8px 20px;
+					background: #409eff;
+					margin-top: 15px;
+					border-radius: 20px;
+					color: #fff;
+					text-decoration: none;
+					box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+				}
+			}
+		}
+	}
+
+	.card:hover .box .content a {
+		background: #ff4049;
+	}
+}
+
+.container .card:hover .box {
+	transform: translateY(-50px);
+	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+	background: linear-gradient(45deg, #b95ce4, #4f29cd);
+}
+
+.container .card:hover .box .content h3,
+.container .card:hover .box .content p {
+	color: #fff;
+}
+
+
